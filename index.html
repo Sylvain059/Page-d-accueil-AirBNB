@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="airbnb_desk.ico" />
-    <meta name="viewport:" content="width=device-width initial-scale=1.0, shrink-to-fit=no"></meta>
+    <meta name="viewport:" content="width=device-width initial-scale=1.0, shrink-to-fit=no">
     <title>Location de vacances, logements, expériences et lieux - Airbnb</title>
   </head>
   <body>
@@ -15,7 +15,7 @@
         <img class="iconeTablette" src="images/icone.png" alt="Logo rouge de Airbnb"> <!-- image nav Tablette-->
         <img class="iconeMobile" src="images/icone.png" alt="Logo rouge de Airbnb"> <!--image nav smartphone-->
 
-        <ul class="sizePc"><!--list Header PC-->
+        <ul class="listNavPc"><!--list Header PC-->
           <li><a href="https://www.airbnb.fr/host?from_nav=1">Devenez Hôte</a></li>
           <li><a href="#">Aide</a></li>
           <li><a href="#">Inscription</a></li>
@@ -32,13 +32,13 @@
       <label for="lieux">Où</label>
       <input type="text" name="lieux" value="Partout" id="lieux">
 
-      <label for="quand">Quand</label>
-      <input type="date" name="quand" value="Dates indifférentes" id="quand">
+      <label for="quandPc">Quand</label>
+      <input type="date"  name="date" value="" id="quandPc">
 
-      <label for="nombre">Voyageurs</label>
-      <input type="" name="Voyageurs" value="1 voyageurs"  id="nombre">
+      <label for="nombrePc">Voyageurs</label>
+      <input type="text" name="Voyageurs" value="1 voyageurs"  id="nombrePc">
 
-      <input type="submit" name="Recherche" value="Rechercher" id="rechercher">
+      <input class="button" type="submit" name="Recherche" value="Rechercher" id="rechercher">
     </form>
 
     <form class="sizeTablette" action="index.html" method="post"><!--formulaire pour tablette-->
@@ -56,7 +56,7 @@
 
     <form class="sizeMobile" action="index.html" method="post"><!--formulaire pour mobile-->
       <label for="searchMobile"></label>
-      <input type="search" name="" value="" id="searchMobile" placeholder="Partout . Dates . 1 Voyageur">
+      <input type="search" name="recherche" value="" id="searchMobile" placeholder="Partout . Dates . 1 Voyageur">
     </form>
 
     <nav>
@@ -71,50 +71,92 @@
     <section class="firstSection"><!--première section-->
       <h2>Réservées à l'instant</h2>
 
-    <div class="divMobile">
-      <a href="#">
-          <figure>
-            <img src="images/reserver01.jpg" alt="">
-            <figcaption><span>17€</span> Engage in a nite of art, music, dance<img src="" alt=""></figcaption>
-          </figure>
-      </a>
+        <div class="divMobile"><!--affichage mobile seulement-->
+          <a href="#">
+            <figure>
+              <img src="images/reserver01.jpg" alt="">
+              <figcaption><span>17€</span> Engage in a nite of art, music, dance</figcaption>
+            </figure>
+          </a>
 
-      <a href="#">
-        <figure>
-          <img src="images/reserver02.jpg" alt="">
-          <figcaption><span>40€</span>Explore the city like a local<img src="" alt=""></figcaption>
-        </figure>
-      </a>
-    </div>
+          <a href="#">
+            <figure>
+              <img src="images/reserver02.jpg" alt="">
+              <figcaption><span>40€</span>Explore the city like a local</figcaption>
+            </figure>
+          </a>
+        </div>
 
-    <div class="divTablette">
-      <a class="sizeTablette" href="#"><!--classe sizeTablette pour le cacher au passage smartphone-->
-        <figure>
-          <img src="images/reserver03.jpg" alt="">
-          <figcaption><span>119€<span>Cooking class in the Countryside<img src="" alt=""></figcaption>
-        </figure>
-      </a>
+        <div class="divTablette"><!--classe sizeTablette affichage tablette-->
+          <a class="sizeTablette" href="#">
+            <figure>
+              <img src="images/reserver01.jpg" alt="">
+              <figcaption><span>17€</span> Engage in a nite of art, music, dance</figcaption>
+            </figure>
+          </a>
 
-      <a class="sizeTablette" href="#"><!--classe sizeTablette pour le cacher au passage smartphone-->
-        <figure>
-          <img src="images/reserver04.jpg" alt="">
-          <figcaption><span>49€</span> Savor tradition in backyard retreat<img src="" alt=""></figcaption>
-        </figure>
-      </a>
-    </div>
+          <a href="sizeTablette">
+            <figure>
+              <img src="images/reserver02.jpg" alt="">
+              <figcaption><span>40€</span>Explore the city like a local</figcaption>
+            </figure>
+          </a>
+          <a href="sizeTablette">
+            <figure>
+              <img src="images/reserver03.jpg" alt="">
+              <figcaption><span>119€</span> Cooking class in the Countryside</figcaption>
+            </figure>
+          </a>
 
-      <a class="sizePc" href="#"> <!--classe sizePc pour le cacher au passage tablette-->
-        <figure>
-          <img src="images/reserver05.jpg" alt="">
-          <figcaption><span>45€</span> Co-create a mural over wine & tapas<img src="" alt=""></figcaption>
-        </figure>
-      </a>
+          <a class="sizeTablette" href="#">
+            <figure>
+              <img src="images/reserver04.jpg" alt="">
+              <figcaption><span>49€</span> Savor tradition in backyard retreat</figcaption>
+            </figure>
+          </a>
+      </div>
+
+      <div class="divPc">
+          <a class="sizePc" href="#"> <!--classe sizePc affichage pc-->
+            <figure>
+              <img src="images/reserver01.jpg" alt="">
+              <figcaption><span>17€</span> Engage in a nite of art, music, dance</figcaption>
+            </figure>
+          </a>
+
+          <a href="sizePc">
+            <figure>
+              <img src="images/reserver02.jpg" alt="">
+              <figcaption><span>40€</span>Explore the city like a local</figcaption>
+            </figure>
+          </a>
+          <a href="sizePc">
+            <figure>
+              <img src="images/reserver03.jpg" alt="">
+              <figcaption><span>119€</span> Cooking class in the Countryside</figcaption>
+            </figure>
+          </a>
+
+          <a class="sizePc" href="#">
+            <figure>
+              <img src="images/reserver04.jpg" alt="">
+              <figcaption><span>49€</span> Savor tradition in backyard retreat</figcaption>
+            </figure>
+          </a>
+
+          <a href="sizePc">
+            <figure>
+              <img src="images/reserver05.jpg" alt="">
+              <figcaption><span>45€</span> Co-create a mural over wine & tapas</figcaption>
+            </figure>
+          </a>
+      </div>
     </section>
 
     <section><!--deuxième section-->
       <h2>Expériences</h2>
 
-      <div class="divMobile">
+      <div class="divMobile"><!--Division Mobile-->
 
        <a href="#">
          <figure>
@@ -129,62 +171,146 @@
            <figcaption><span>45€</span> A deep visual adventure</figcaption>
          </figure>
        </a>
-     </div>
+      </div>
 
-     <div class="divTablette">
-       <a class="sizeTablette" href="#"><!--classe sizeTablette pour le cacher au passage smartphone-->
-         <figure>
-           <img src="images/experience03.jpg" alt="">
-           <figcaption><span>43€<span> Experience authentic home cooking & beautiful</figcaption>
-         </figure>
+      <div class="divTablette"><!--Division Tablette-->
+       <a href="#">
+        <figure>
+          <img src="images/experience01.jpg" alt="">
+          <figcaption><span>57€</span> Get a taste of an authentic tapas</figcaption>
+        </figure>
        </a>
 
-       <a class="sizeTablette" href="#"><!--classe sizeTablette pour le cacher au passage smartphone-->
+       <a href="#">
+        <figure>
+          <img src="images/experience02.jpg" alt="">
+          <figcaption><span>45€</span> A deep visual adventure</figcaption>
+        </figure>
+       </a>
+
+       <a class="sizeTablette" href="#">
+        <figure>
+          <img src="images/experience03.jpg" alt="">
+          <figcaption><span>43€</span>span> Experience authentic home cooking & beautiful</figcaption>
+        </figure>
+       </a>
+
+       <a class="sizeTablette" href="#">
+        <figure>
+          <img src="images/experience04.jpg" alt="">
+          <figcaption><span>82€</span> dine on farm with the Chef & Farmer</figcaption>
+        </figure>
+       </a>
+      </div>
+
+      <div class="divPc">
+       <a class="sizePc" href="#">
+         <figure>
+           <img src="images/experience01.jpg" alt="">
+           <figcaption><span>57€</span> Get a taste of an authentic tapas</figcaption>
+         </figure>
+        </a>
+
+        <a class="sizePc" href="#">
+         <figure>
+           <img src="images/experience02.jpg" alt="">
+           <figcaption><span>45€</span> A deep visual adventure</figcaption>
+         </figure>
+        </a>
+
+        <a class="sizePc" href="#">
+         <figure>
+           <img src="images/experience03.jpg" alt="">
+           <figcaption><span>43€</span>span> Experience authentic home cooking & beautiful</figcaption>
+         </figure>
+        </a>
+
+        <a class="sizePc" href="#">
          <figure>
            <img src="images/experience04.jpg" alt="">
            <figcaption><span>82€</span> dine on farm with the Chef & Farmer</figcaption>
          </figure>
-       </a>
-     </div>
+        </a>
 
-      <a class="sizePc" href="#"><!--classe sizePc pour le cacher au passage tablette-->
-        <figure>
-          <img src="images/experience05.jpg" alt="">
-          <figcaption><span>29€</span> Walk, shop and taste Union St.'s best</figcaption>
-        </figure>
-      </a>
-    </section>
+        <a class="sizePc" href="#">
+         <figure>
+           <img src="images/experience05.jpg" alt="">
+           <figcaption><span>29€</span> Walk, shop and taste Union St.'s</figcaption>
+         </figure>
+        </a>
+      </div>
+   </section>
 
-    <section><!--troisème section-->
+  <section><!--troisème section-->
       <h2>Logements</h2>
 
       <div class="divMobile">
         <a href="#">
           <figure>
-            <img src="images/logement01.jpg" alt="">
+            <img src="images/logement01.jpg" alt="Logement Hvar">
             <figcaption><span>35€</span> The best position in Hvar!
-Logement entier · 2 lits<img src="" alt=""></figcaption>
+Logement entier · 2 lits
+            </figcaption>
           </figure>
         </a>
 
         <a href="#">
           <figure>
-            <img src="images/logement02.jpg" alt="">
-            <figcaption><span>68€</span> Designer Loft Bangkok Silom
-Logement entier · 1 lit<img src="" alt=""></figcaption>
+            <img src="images/logement02.jpg" alt="Logement Bangkok">
+            <figcaption><span>68€</span> Designer Loft Bangkok Silomn
+Logement entier · 1 lit
+            </figcaption>
           </figure>
         </a>
        </div>
 
        <div class="divTablette">
-         <a class="sizePc" href="#"><!--classe sizePc pour le cacher au passage tablette-->
+         <a href="#"><!--Affichage tablette-->
+           <figure>
+             <img src="images/logement01.jpg" alt="Logement Hvar">
+             <figcaption><span>35€</span> The best position in Hvar!
+ Logement entier · 2 lits
+             </figcaption>
+           </figure>
+         </a>
+
+         <a href="#">
+           <figure>
+             <img src="images/logement02.jpg" alt="Logement Bangkok">
+             <figcaption><span>68€</span> Designer Loft Bangkok Silom
+ Logement entier · 1 lit
+             </figcaption>
+           </figure>
+         </a>
+      </div>
+
+      <div class="divPc"><!--Affichage Pc-->
+        <a href="#">
           <figure>
-            <img src="images/logement03.jpg" alt="">
-            <figcaption><span>164€</span> Adorable Garden Gingerbread House
-Logement entier · 1 lit<img src="" alt=""></figcaption>
+            <img src="images/logement01.jpg" alt="Logement Hvar">
+            <figcaption><span>35€</span> The best position in Hvar!
+Logement entier · 2 lits
+            </figcaption>
+          </figure>
+        </a>
+
+        <a href="#">
+          <figure>
+            <img src="images/logement02.jpg" alt="Logement Bangkok">
+            <figcaption><span>68€</span> Designer Loft Bangkok Silom
+Logement entier · 1 lit
+            </figcaption>
+          </figure>
+        </a>
+
+        <a href="#">
+          <figure>
+            <img src="images/logement03.jpg" alt="Logement Haitï">
+            <figcaption><span>48€</span>Double Room in El vaixell de paper</figcaption>
           </figure>
         </a>
       </div>
+    </section>
 
 
     <section><!--quatrième section-->
@@ -193,47 +319,89 @@ Logement entier · 1 lit<img src="" alt=""></figcaption>
       <div class="divMobile">
         <a href="#">
           <figure>
-            <img src="images/LA.jpg" alt="">
+            <img src="images/LA.jpg" alt="Los Angeles">
             <figcaption>Los Angeles</figcaption>
           </figure>
         </a>
 
         <a href="#">
           <figure>
-            <img src="images/tokyo.jpg" alt="">
+            <img src="images/tokyo.jpg" alt="Tokyo">
             <figcaption>Tokyo</figcaption>
           </figure>
         </a>
       </div>
 
       <div class="divTablette">
-        <a class="sizeTablette" href="#"><!--classe sizeTablette pour le cacher au passage smartphone-->
-         <figure>
-           <img src="images/paris.jpg" alt="">
-           <figcaption>Paris</figcaption>
-         </figure>
+        <a class="sizeTablette" href="#"><!--Affichage tablette-->
+          <figure>
+            <img src="images/LA.jpg" alt="Los Angeles">
+            <figcaption>Los Angeles</figcaption>
+          </figure>
         </a>
 
-        <a class="sizeTablette" href="#"><!--classe sizetTblette pour le cacher au passage smartphone-->
-         <figure>
-           <img src="images/florence.jpg" alt="">
-           <figcaption>Florence</figcaption>
-         </figure>
+        <a class="sizeTablette" href="#">
+          <figure>
+            <img src="images/tokyo.jpg" alt="Tokyo">
+            <figcaption>Tokyo</figcaption>
+          </figure>
+        </a>
+
+        <a class="sizeTablette" href="#">
+          <figure>
+            <img src="images/paris.jpg" alt="Paris">
+            <figcaption>Paris</figcaption>
+          </figure>
+        </a>
+
+        <a class="sizeTablette" href="#">
+          <figure>
+            <img src="images/florence.jpg" alt="Florence">
+            <figcaption>Florence</figcaption>
+          </figure>
         </a>
       </div>
+      <div class="divPc">
+       <a class="sizePc" href="#"><!--Affichage PC-->
+         <figure>
+           <img src="images/LA.jpg" alt="Los Angeles">
+           <figcaption>Los Angeles</figcaption>
+         </figure>
+       </a>
 
-      <a class="sizePc" href="#"><!--classe sizePc pour le cacher au passage tablette-->
-        <figure>
-          <img src="images/londre.jpg" alt="">
-          <figcaption>Londres</figcaption>
-        </figure>
-      </a>
+       <a class="sizePc" href="#">
+         <figure>
+           <img src="images/tokyo.jpg" alt="Tokyo">
+           <figcaption>Tokyo</figcaption>
+         </figure>
+       </a>
+
+       <a class="sizePc" href="#">
+         <figure>
+           <img src="images/paris.jpg" alt="Paris">
+           <figcaption>Paris</figcaption>
+         </figure>
+       </a>
+
+       <a class="sizePc" href="#">
+         <figure>
+           <img src="images/florence.jpg" alt="Florence">
+           <figcaption>Florence</figcaption>
+         </figure>
+       </a>
+       <a class="sizePc">
+         <figure>
+           <img src="images/londre.jpg" alt="Londre">
+           <figcaption>Londres</figcaption>
+         </figure>
+       </a>
+     </div>
     </section>
 
     <div class="sectionDiv">
 
       <figure>
-        <img src="images/imageestimer.jpg" alt="">
+        <img src="images/imageestimer.jpg" alt="deux personnes se sert la main">
       </figure>
 
       <section>
@@ -245,6 +413,7 @@ Logement entier · 1 lit<img src="" alt=""></figcaption>
     </div>
 
     <footer>
+      <div class="listFooter">
       <form class="choix" action="index.html" method="post">
         <label for="langueChoix"></label>
         <select name="destination" id="langueChoix">
@@ -256,11 +425,10 @@ Logement entier · 1 lit<img src="" alt=""></figcaption>
         <select name="devise" id="deviseChoix">
           <option value="Euro">EUR</option>
           <option value="Dollar">USD</option>
-
         </select>
       </form>
 
-      <aside class="sizeTablette"><!--classe sizeTablette pour pouvoir le cacher quand on passe en mobile-->
+      <aside class="sizeTablettePc"><!--classe sizeTablette pour pouvoir le cacher quand on passe en mobile-->
         <section>
           <h3>Airbnb</h3>
           <ul>
@@ -285,7 +453,7 @@ Logement entier · 1 lit<img src="" alt=""></figcaption>
         </section>
 
         <section>
-          <h3></h3>
+          <h3>Hébergement</h3>
           <ul>
             <li><a href="https://www.airbnb.fr/host">Pourquoi être hôtes</a></li>
             <li><a href="https://www.airbnb.fr/hospitality">Hospitalité</a></li>
@@ -294,11 +462,11 @@ Logement entier · 1 lit<img src="" alt=""></figcaption>
         </section>
 
       </aside>
-
+      </div>
       <div class="footer">
 
         <figure>
-          <img src="" alt="">
+          <img src="#" alt="Airbnb, inc">
           <figcaption></figcaption>
         </figure>
 
@@ -306,9 +474,9 @@ Logement entier · 1 lit<img src="" alt=""></figcaption>
           <li><a href="https://www.airbnb.fr/terms">Conditions</a></li>
           <li><a href="https://www.airbnb.fr/terms/privacy_policy">Politique deconfidentialité</a></li>
           <li class="sizeTablette"><a href="https://www.airbnb.fr/sitemaps">Plan du site</a></li>
-          <li><a href="https://www.facebook.com/"><img src="images/facebook.png" alt=""></a></li>
-          <li><a href="https://twitter.com/"><img src="images/twitter.png" alt=""></a></li>
-          <li><a href="https://www.instagram.com/"><img src="images/instagram.png" alt=""></a></li>
+          <li><a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a></li>
+          <li><a href="https://twitter.com/"><img src="images/twitter.png" alt="twitter"></a></li>
+          <li><a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram"></a></li>
         </ul>
 
       </div>
