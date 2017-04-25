@@ -12,6 +12,10 @@ body{
 }
 
 .sizeTablette{
+  display: none;
+}
+
+.divTablette{
   display:none;
 }
 
@@ -60,7 +64,7 @@ form + nav{
   margin-left: 15px;
 }
 
-ul{
+nav ul{
   display: flex;
   justify-content:flex-start;
   border-bottom: 1px solid #e4e4e4;
@@ -167,6 +171,15 @@ footer ul img{
   color: #767676;
 }
 
+
+
+
+
+
+
+
+
+/******************************************Début min-width 744px****************************************************/
 @media (min-width: 744px) {
 
   h1, .wordColor{
@@ -197,17 +210,106 @@ footer ul img{
     display: block;
   }
 
+  .sizeTablette{
+    margin: 10px 0 70px 0;
+  }
+
   .formTablette{
     display: flex;
     justify-content: flex-start;
-    width: 80%;
-    height: 60px;
+    margin: 0 15px;
+    width: auto;
+    height: 50px;
+  }
+
+  .divMobile{
+    display: none;
+  }
+
+  .divTablette{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0;
+  }
+
+  .divTablette figure{
+    width: 75%;
+  }
+
+  .sectionDiv{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .sectionDiv figure{
+    order: 2;
+    width: 45%;
+    margin-right: 0;
+  }
+
+  .sectionDiv section{
+    width: 45%;
+  }
+
+  .listFooter{
+  display: flex;
+  }
+
+  .listFooter form{
+    flex-direction: column;
+    width: 30%;
+  }
+
+  .listFooter section{
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+    margin: 0 5px;
+
+
+  }
+
+  .listFooter h3{
+    margin-left: 38px;
+  }
+
+  .listFooter ul{
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  .footer{
+    border-top: 1px solid #e4e4e4;
+  }
+
+  .footer ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;;
   }
 }
 
+
+
+
+
+
+
+
+
+/*************************************************Début Min-width 992px*************************************************/
 @media (min-width: 992px) {
   header{
-    background-color: green;
+
   }
 
+  .sizeTablette{
+    display: none;
+  }
+
+  .divTablette{
+    display: none;
+  }
 }
